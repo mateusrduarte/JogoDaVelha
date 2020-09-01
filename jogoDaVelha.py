@@ -41,7 +41,7 @@ def fullBoardCheck(board):
 def askPlayer(mark):
     global board
 
-    req =  'Choose where  to pleas you: ' + mark
+    req =  'Choose where  to pleas you: ' + mark + '\n'
     while True:
         try:
             choice = int(input(req))
@@ -70,7 +70,7 @@ def playerChoice(mark):
     if winCheck(board, mark):
         os.system('clear') or None
         displayBoard()
-        announce = mark + "Wins! Congatulations"
+        announce = mark + " Wins! Congatulations"
         gameState = False
 
     os.system('clear') or None
@@ -103,7 +103,7 @@ def playGame():
         if gameState == False:
             break
 
-    rematch = input('Would you like  to play again? y/n')
+    rematch = input('Would you like  to play again? y/n \n')
     if rematch == 'y':
         playGame()
     else:
